@@ -1,0 +1,20 @@
+
+
+<div class="container text-center">
+  <%= link_to "Retourner sur la home", "index.html", class: "btn btn-primary"  %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% data.cities.each do |city| %>
+      <div class="col-md-4">
+        <div class="card" style="background-image: url('https://kitt.lewagon.com/placeholder/cities/<%= city[:name].downcase %>');">
+          <h1><%= city[:name].capitalize %></h1>
+          <p><%= city[:address] %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
